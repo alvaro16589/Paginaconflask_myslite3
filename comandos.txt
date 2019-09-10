@@ -1,4 +1,4 @@
-comando para instalar pip para python3
+comando para instalar pip para python3 en la terminal
 # sudo apt install python3-pip
 
 para instalar pipenv en ubuntu es con 
