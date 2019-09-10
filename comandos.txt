@@ -1,0 +1,16 @@
+comando para instalar pip para python3
+# sudo apt install python3-pip
+
+para instalar pipenv en ubuntu es con 
+--># sudo -H pip install -U pipenv
+para inicializar el entorno virtual
+# pipenv shell
+para instalar los drivers de sqlite3
+#pipenv install Flask-SQLAlchemy
+comando sqlite3 para crear la lista de base de datos
+#sqlite3 {url de la base de datos} // ejemplo baseDeDatos/tasks.db
+iniciado el motor de comandos sqlite para materializar la base de datos el comando es
+# .databases
+comando para salir de sqlite
+# .exit
+nos quedamos en el minuto 27
