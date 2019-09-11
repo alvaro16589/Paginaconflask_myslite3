@@ -5,11 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Bienbenido al primer dia de tus dias XD---!!</title>
+    <title>Manejo de DB</title>
+    <!-- bootstrap4-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css">
+    <!--fuentes-->
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet"><!--fuente traida de googleFonts-->
+    <!--EStilos css-->
     <link rel="stylesheet" href="{{ url_for('static',filename='estilo.css') }} ">
 </head>
 <body>  
-    <main>
+    <main class="container p-4">
+        <h1 class="display-4 text-center title mt-4 ">PONIENDO UN TITULO</h1>
+        <div class="row">
+            <div class="col-md-4 offset-md-4 my-auto"><!--my =margen "y" o vertical, coloquelo de manera automática"auto"" -->
+                <div class="card"> 
+                    <div class="card-header">
+                        <form action="/crear-tarea" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="contenido" placeholder="Ingrese una tarea" class="form-control" autofocus>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block buttonradius-4 ">
+                                ENVIAR
+                            </button>
+                        </form>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            {%for ta in tareasguardadas%}
+                            <li class="list-group-item">
+                                <span class="{%if ta.hecho%}done{%endif%}">
+                                        {{ta.id}}
+                                        {{ta.contenido}}
+                                </span>  
+                                <a href="/hecho/{{ta.id}}" class="btn btn-success btn-sm">HECHO</a><!--sm para que el boton sea pequeño "small"-->
+                                <a href="/borrar/{{ta.id}}" class="btn btn-danger btn-sm">BORRAR</a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
     </main>
 </body>
