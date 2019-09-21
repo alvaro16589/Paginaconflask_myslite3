@@ -9,7 +9,7 @@ class task(db.Model):
     contenido = db.Column(db.String(200))
     hecho = db.Column(db.Boolean)
 
-@app.route('/')#crear una ruta
+@app.route('/')#crear una ruta 
 def home():#puedes poner cualquier nombre es la ruta inicial
     showData = task.query.all()#pregunta por todos los datos en la base de datos
     return render_template('index.html', tareasguardadas= showData)#llama a los archivos en el carpeta templates 
@@ -35,6 +35,6 @@ def borrar(id):
     db.session.commit()
     return redirect(url_for('home'))
 
-if __name__ == "__main__":#para ejecutarlo se hace una comparacion para saber si es el archivo principal 
-    app.run(debug=True)#debug para que si se modifica el codigo el servidor se reinicia
+if __name__ == "__main__":#para ejecutarlo se hace una comparacion para saber si es el archivo principal ///// codigo inicil
+    app.run(debug=True)#debug para que si se modifica el codigo el servidor se reinicia ///// codigo inicial
 

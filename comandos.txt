@@ -7,6 +7,9 @@ para instalar pipenv en ubuntu es con
 para inicializar el entorno virtual
 # pipenv shell
 
+para instalar Flask
+# pipenv install flask
+
 para instalar los drivers de sqlite3
 #pipenv install Flask-SQLAlchemy
 
